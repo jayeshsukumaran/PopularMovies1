@@ -1,99 +1,107 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.banawo.popularmovies1.DetailFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/movieImage"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="false"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:minHeight="200dp"
-        android:minWidth="150dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/titleView"
-        android:textStyle="bold"
-        android:layout_below="@+id/movieImage"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Synopsis"
-        android:id="@+id/synopsisLabel"
-        android:layout_toEndOf="@+id/movieImage"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentLeft="true"
-        android:textStyle="bold"
-        android:layout_marginLeft="5dp"
-        android:layout_below="@+id/titleView"/>
-
-    <TextView
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/synopsisView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/synopsisLabel"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp"/>
+        android:fillViewport="false">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Rating: "
-        android:id="@+id/ratingLabel"
-        android:layout_toRightOf="@+id/movieImage"
-        android:layout_marginLeft="30dp"
-        android:textStyle="bold"
-        />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/rating"
-        android:textStyle="bold"
-        android:layout_toRightOf="@+id/ratingLabel"
-        android:layout_alignTop="@+id/ratingLabel"
-        android:layout_marginLeft="5dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Release:"
-        android:id="@+id/relDateLabel"
-        android:layout_alignParentTop="false"
-        android:layout_alignStart="@+id/ratingLabel"
-        android:layout_alignLeft="@+id/ratingLabel"
-        android:layout_below="@+id/ratingLabel"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/movieImage"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:minHeight="200dp"
+                android:minWidth="150dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/relDateTextView"
-        android:layout_alignTop="@+id/relDateLabel"
-        android:layout_toEndOf="@+id/relDateLabel"
-        android:textStyle="bold"
-        android:layout_marginLeft="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/titleView"
+                android:textStyle="bold"
+                android:layout_below="@+id/movieImage"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"/>
 
-</RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Synopsis"
+                android:id="@+id/synopsisLabel"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/titleView"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/synopsisView"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/synopsisLabel"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Rating: "
+                android:id="@+id/ratingLabel"
+                android:layout_toRightOf="@+id/movieImage"
+                android:layout_marginLeft="30dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/rating"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/ratingLabel"
+                android:layout_alignTop="@+id/ratingLabel"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Release:"
+                android:id="@+id/relDateLabel"
+                android:layout_alignParentTop="false"
+                android:layout_alignStart="@+id/ratingLabel"
+                android:layout_alignLeft="@+id/ratingLabel"
+                android:layout_below="@+id/ratingLabel"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/relDateTextView"
+                android:layout_alignTop="@+id/relDateLabel"
+                android:layout_toEndOf="@+id/relDateLabel"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
