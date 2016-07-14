@@ -12,11 +12,24 @@ public class DetailActivity extends AppCompatActivity implements DetailFragment.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        getSupportFragmentManager().beginTransaction().add(R.id.detail,new DetailFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.detail,new DetailFragment()).commit();
     }
 
     public void onFragmentInteraction(Uri uri) {
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        //data to be saved
+        super.onSaveInstanceState(outState);
+    }
+
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        //retore data
     }
 
 }
